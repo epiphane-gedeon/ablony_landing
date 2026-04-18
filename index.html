@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ablony — Donne une seconde vie à ton style</title>
+  <meta name="description" content="Ablony est l'application mobile pour vendre et acheter des vêtements en Afrique. Simple, rapide, sécurisé. Rejoins la liste d'attente dès maintenant." />
+  <meta property="og:title" content="Ablony — Donne une seconde vie à ton style" />
+  <meta property="og:description" content="Vends tes vêtements, achète facilement, reçois ton argent. L'app de mode seconde main pensée pour l'Afrique." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <!-- <span class="logo-icon">◈</span>
+        <span class="logo-text">ablony</span> -->
+        <img style="width: 100px;" src="./images/logo_bleu.png" alt="Ablony">
+      </a>
+      <div class="nav-links">
+        <a href="#how" class="nav-link">Comment ça marche</a>
+        <a href="#features" class="nav-link">Fonctionnalités</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <a href="waitlist.html" class="btn-nav">Rejoindre</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#how" class="mobile-link">Comment ça marche</a>
+      <a href="#features" class="mobile-link">Fonctionnalités</a>
+      <a href="#faq" class="mobile-link">FAQ</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+      <a href="waitlist.html" class="btn-primary mobile-cta">Rejoindre la liste d'attente</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          Bientôt disponible !
+        </div>
+        <h1 class="hero-title reveal">
+          Donne une<br/>
+          <span class="text-gradient">seconde vie</span><br/>
+          à ton style
+        </h1>
+        <p class="hero-sub reveal">
+          Ablony simplifie la vente et l'achat de vêtements. Publie en 30 secondes, vends rapidement, reçois ton argent directement sur ton wallet.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="waitlist.html" class="btn-primary">
+            <span>Rejoindre la liste d'attente</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#how" class="btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M10 8l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Voir comment ça marche
+          </a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num">+500</span>
+            <span class="stat-label">inscrits sur la waitlist</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">30s</span>
+            <span class="stat-label">pour publier un article</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">0%</span>
+            <span class="stat-label">commission au lancement</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="phone-wrapper">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-mockup">
+                <div class="app-header">
+                  <span class="app-logo-sm">◈ ablony</span>
+                  <div class="app-icons">
+                    <div class="app-dot"></div>
+                    <div class="app-dot"></div>
+                  </div>
+                </div>
+                <div class="app-search">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#999" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="#999" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>Rechercher...</span>
+                </div>
+                <div class="app-grid">
+                  <div class="app-card">
+                    <div class="app-card-img" style="background: linear-gradient(135deg, #d4a0c0, #c080a0);">
+                      <div class="app-card-tag">Neuf</div>
+                    </div>
+                    <div class="app-card-info">
+                      <span class="app-card-name">Robe florale</span>
+                      <span class="app-card-price">4 500 FCFA</span>
+                    </div>
+                  </div>
+                  <div class="app-card">
+                    <div class="app-card-img" style="background: linear-gradient(135deg, #a0b8d8, #7090c0);">
+                      <div class="app-card-tag">TBE</div>
+                    </div>
+                    <div class="app-card-info">
+                      <span class="app-card-name">Veste denim</span>
+                      <span class="app-card-price">7 200 FCFA</span>
+                    </div>
+                  </div>
+                  <div class="app-card">
+                    <div class="app-card-img" style="background: linear-gradient(135deg, #d0c090, #b8a060);">
+                      <div class="app-card-tag">Bon état</div>
+                    </div>
+                    <div class="app-card-info">
+                      <span class="app-card-name">Sneakers</span>
+                      <span class="app-card-price">12 000 FCFA</span>
+                    </div>
+                  </div>
+                  <div class="app-card">
+                    <div class="app-card-img" style="background: linear-gradient(135deg, #c0d8a0, #90c070);">
+                      <div class="app-card-tag">Neuf</div>
+                    </div>
+                    <div class="app-card-info">
+                      <span class="app-card-name">Sac à main</span>
+                      <span class="app-card-price">8 500 FCFA</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="app-nav-bar">
+                  <div class="app-nav-item active">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                  </div>
+                  <div class="app-nav-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg>
+                  </div>
+                  <div class="app-nav-item app-nav-add">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+                  </div>
+                  <div class="app-nav-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <div class="app-nav-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float-card float-card-1">
+            <div class="float-icon">✓</div>
+            <div>
+              <div class="float-title">Vente confirmée !</div>
+              <div class="float-sub">+4 500 FCFA sur ton wallet</div>
+            </div>
+          </div>
+          <div class="float-card float-card-2">
+            <div class="float-icon">🔒</div>
+            <div>
+              <div class="float-title">Paiement sécurisé</div>
+              <div class="float-sub">Wallet intégré</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section-how" id="how">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Simple comme bonjour</div>
+        <h2 class="section-title">Comment ça marche ?</h2>
+        <p class="section-sub">En 3 étapes, tu peux vendre ton premier article et recevoir ton argent.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-number">01</div>
+          <div class="step-icon-wrap">
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg>
+            </div>
+          </div>
+          <div class="step-content">
+            <h3>Publie ton article</h3>
+            <p>Prends une photo, ajoute une description et fixe ton prix. En moins de 30 secondes, ton article est en ligne.</p>
+          </div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">02</div>
+          <div class="step-icon-wrap">
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+          </div>
+          <div class="step-content">
+            <h3>Trouve un acheteur</h3>
+            <p>Les acheteurs te contactent via le chat intégré. Discute, négocie et confirme la vente directement dans l'app.</p>
+          </div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">03</div>
+          <div class="step-icon-wrap">
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+            </div>
+          </div>
+          <div class="step-content">
+            <h3>Reçois ton argent</h3>
+            <p>Le montant de ta vente est crédité instantanément sur ton wallet Ablony. Retire quand tu veux.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section-features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Tout ce qu'il te faut</div>
+        <h2 class="section-title">Des fonctionnalités<br/>pensées pour toi</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card feature-big reveal">
+          <div class="feature-icon-lg">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Vente ultra-rapide</h3>
+          <p>Mets en ligne en 30 secondes chrono. Photo, description, prix — et c'est parti. L'interface est pensée pour que ça aille vite.</p>
+          <div class="feature-tag">⚡ 30 secondes</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <h3>Achat simple</h3>
+          <p>Explore des milliers d'articles, filtre par taille, couleur ou prix. Trouve exactement ce que tu cherches.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Chat intégré</h3>
+          <p>Discute directement avec les vendeurs. Pose tes questions, négocie et finalise l'achat sans quitter l'app.</p>
+        </div>
+        <div class="feature-card feature-highlight reveal">
+          <div class="feature-icon-lg">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>
+          </div>
+          <h3>Wallet sécurisé</h3>
+          <p>Ton argent est en sécurité. Le wallet intégré protège chaque transaction et te permet de retirer facilement.</p>
+          <div class="feature-tag">🔒 Paiement sécurisé</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Boost d'annonces</h3>
+          <p>Mets en avant tes articles pour les rendre plus visibles et vendre encore plus vite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section-trust" id="trust">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Pourquoi Ablony</div>
+        <h2 class="section-title">Une app en qui<br/>tu peux avoir confiance</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card reveal">
+          <div class="trust-emoji">🌍</div>
+          <h3>Communauté</h3>
+          <p>Des milliers de vendeurs et acheteurs africains qui partagent la même passion pour la mode et la seconde main.</p>
+        </div>
+        <div class="trust-card reveal">
+          <div class="trust-emoji">✨</div>
+          <h3>Simple</h3>
+          <p>Interface épurée, intuitive, pensée pour être utilisée par tous. Pas besoin d'être tech pour vendre ou acheter.</p>
+        </div>
+        <div class="trust-card reveal">
+          <div class="trust-emoji">🛡️</div>
+          <h3>Sécurisé</h3>
+          <p>Transactions protégées, données chiffrées, wallet sécurisé. Ton argent et ta vie privée sont notre priorité.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMING SOON BANNER -->
+  <section class="section-coming reveal">
+    <div class="container">
+      <div class="coming-inner">
+        <div class="coming-left">
+          <div class="coming-tag">🚀 En cours de développement</div>
+          <h2>L'app arrive bientôt.</h2>
+          <p>Ablony est actuellement en phase de développement. Inscris-toi sur la liste d'attente pour être parmi les premiers à l'utiliser et bénéficier des avantages exclusifs des early adopters.</p>
+          <div class="coming-perks">
+            <div class="perk"><span>✓</span> Accès en avant-première</div>
+            <div class="perk"><span>✓</span> 0% de commission au lancement</div>
+            <div class="perk"><span>✓</span> Badge "Fondateur"</div>
+          </div>
+        </div>
+        <div class="coming-right">
+          <div class="coming-progress-wrap">
+            <div class="coming-progress-label">
+              <span>Développement</span>
+              <span>75%</span>
+            </div>
+            <div class="coming-bar">
+              <div class="coming-fill" style="width: 75%"></div>
+            </div>
+            <div class="coming-progress-label">
+              <span>Beta test</span>
+              <span>Bientôt</span>
+            </div>
+            <div class="coming-bar">
+              <div class="coming-fill" style="width: 10%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Questions fréquentes</div>
+        <h2 class="section-title">Tu as des questions ?</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>Ablony est-il disponible maintenant ?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Ablony est actuellement en phase de développement. Tu peux t'inscrire sur notre liste d'attente pour être parmi les premiers à être notifié lors du lancement officiel.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>Dans quels pays sera disponible Ablony ?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Ablony lancera d'abord en Afrique de l'Ouest, notamment au Togo, puis s'étendra progressivement à toute l'Afrique.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>Comment fonctionne le paiement ?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Ablony intègre un wallet sécurisé. Les acheteurs paient via l'application, l'argent est sécurisé jusqu'à la confirmation de réception, puis libéré sur le wallet du vendeur.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>Est-ce que vendre sur Ablony est payant ?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Au lancement, les early adopters bénéficieront de 0% de commission. C'est l'un des avantages exclusifs de s'inscrire sur la liste d'attente maintenant.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>Quels types de vêtements peut-on vendre ?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Tous types de vêtements et accessoires de mode : robes, pantalons, chaussures, sacs, bijoux, etc. L'état doit être correct (usure normale acceptée, articles propres obligatoires).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section-cta" id="cta">
+    <div class="cta-bg">
+      <div class="cta-blob"></div>
+    </div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div class="section-tag">Rejoins l'aventure</div>
+        <h2>Sois informé du lancement</h2>
+        <p>Inscris-toi maintenant et reçois une notification dès qu'Ablony est disponible. 0% de commission offerts aux premiers inscrits.</p>
+        <form class="cta-form" id="ctaForm" onsubmit="handleCTASubmit(event)">
+          <div class="cta-input-wrap">
+            <input type="email" placeholder="ton@email.com" required id="ctaEmail" class="cta-input" />
+            <button type="submit" class="btn-primary">
+              <span>M'inscrire</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p class="cta-note">Pas de spam, promis. Juste l'essentiel. 🤝</p>
+        </form>
+        <div class="cta-success" id="ctaSuccess" style="display:none">
+          <div class="success-icon">🚀</div>
+          <h3>Tu es sur la liste !</h3>
+          <p>On te contactera dès le lancement. Merci de ta confiance !</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <!-- <span class="logo-icon">◈</span>
+            <span class="logo-text">ablony</span> -->
+            <img style="width: 100px;" src="./images/logo_blanc.png" alt="Ablony">
+          </a>
+          <p>La marketplace de mode seconde main pensée pour l'Afrique.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/ablony_officiel" target="_blank" rel="noopener" class="social-link" aria-label="Instagram Ablony">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+            <a href="https://instagram.com/ablony_officiel" target="_blank" rel="noopener" class="social-link" aria-label="Instagram Ablony">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+              Linkedin
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Produit</h4>
+            <a href="#how">Comment ça marche</a>
+            <a href="#features">Fonctionnalités</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <h4>Entreprise</h4>
+            <a href="contact.html">Contact</a>
+            <a href="waitlist.html">Liste d'attente</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Ablony. Tous droits réservés.</p>
+        <p>Fait avec ❤️ pour l'Afrique</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
