@@ -1,4 +1,9 @@
 <?php
+// Ensure JSON is always returned, even on error
+header('Content-Type: application/json; charset=UTF-8');
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
+
 // Configuration
 $recipient_email = 'contact@epiphane-gedeon.com';
 $response = array();
@@ -41,7 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($errors)) {
         $response['success'] = false;
         $response['errors'] = $errors;
-        header('Content-Type: application/json');
         echo json_encode($response);
         exit;
     }
@@ -97,6 +101,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Retourner la réponse JSON
-header('Content-Type: application/json');
 echo json_encode($response);
-?>
+exit;

@@ -170,6 +170,8 @@ function handleContactSubmit(e) {
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
   const formData = new FormData(form);
+
+  console.log(formData.get('name'), formData.get('email'), formData.get('message'), formData.get('message')); 
   
   if (btn) {
     btn.innerHTML = '<span>Envoi en cours...</span>';
@@ -180,7 +182,14 @@ function handleContactSubmit(e) {
     method: 'POST',
     body: formData
   })
-  .then(response => response.json())
+  .then(response => {
+    // Check if response is JSON
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Réponse invalide du serveur. Veuillez contacter support.');
+    }
+    return response.json();
+  })
   .then(data => {
     if (data.success) {
       form.style.display = 'none';
@@ -216,6 +225,7 @@ function handleWaitlistSubmit(e) {
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
   const formData = new FormData(form);
+  console.log (formData);
   
   if (btn) {
     btn.innerHTML = '<span>Inscription...</span>';
@@ -226,7 +236,14 @@ function handleWaitlistSubmit(e) {
     method: 'POST',
     body: formData
   })
-  .then(response => response.json())
+  .then(response => {
+    // Check if response is JSON
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Réponse invalide du serveur. Veuillez contacter support.');
+    }
+    return response.json();
+  })
   .then(data => {
     if (data.success) {
       form.style.display = 'none';

@@ -1,4 +1,9 @@
 <?php
+// Ensure JSON is always returned, even on error
+header('Content-Type: application/json; charset=UTF-8');
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
+
 // Charger les variables d'environnement depuis .env
 $env_file = __DIR__ . '/.env';
 if (file_exists($env_file)) {
@@ -42,7 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($errors)) {
         $response['success'] = false;
         $response['errors'] = $errors;
-        header('Content-Type: application/json');
         echo json_encode($response);
         exit;
     }
@@ -66,7 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($check->fetch()) {
             $response['success'] = false;
             $response['errors'] = array('Cet email est déjà inscrit sur la liste d\'attente.');
-            header('Content-Type: application/json');
             echo json_encode($response);
             exit;
         }
@@ -90,6 +93,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Retourner la réponse JSON
-header('Content-Type: application/json');
 echo json_encode($response);
-?>
+exit;
