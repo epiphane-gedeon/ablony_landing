@@ -167,34 +167,91 @@ function handleCTASubmit(e) {
 // ——— CONTACT FORM ———
 function handleContactSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const formData = new FormData(form);
+  
   if (btn) {
     btn.innerHTML = '<span>Envoi en cours...</span>';
     btn.disabled = true;
   }
-  setTimeout(() => {
-    document.getElementById('contactForm').style.display = 'none';
-    const success = document.getElementById('formSuccess');
-    if (success) {
-      success.style.display = 'block';
+  
+  fetch('submit_form.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      form.style.display = 'none';
+      const success = document.getElementById('formSuccess');
+      if (success) {
+        success.style.display = 'block';
+        success.style.animation = 'fadeInUp 0.5s ease forwards';
+      }
+    } else {
+      // Afficher les erreurs
+      if (data.errors && data.errors.length > 0) {
+        alert('Erreur(s):\n' + data.errors.join('\n'));
+      }
+      if (btn) {
+        btn.innerHTML = '<span>Envoyer le message</span>';
+        btn.disabled = false;
+      }
     }
-  }, 900);
+  })
+  .catch(error => {
+    console.error('Erreur:', error);
+    alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+    if (btn) {
+      btn.innerHTML = '<span>Envoyer le message</span>';
+      btn.disabled = false;
+    }
+  });
 }
 
 // ——— WAITLIST FORM ———
 function handleWaitlistSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const formData = new FormData(form);
+  
   if (btn) {
     btn.innerHTML = '<span>Inscription...</span>';
     btn.disabled = true;
   }
-  setTimeout(() => {
-    document.getElementById('waitlistForm').style.display = 'none';
-    const success = document.getElementById('waitlistSuccess');
-    if (success) {
-      success.style.display = 'block';
-      success.style.animation = 'fadeInUp 0.5s ease forwards';
+  
+  fetch('submit_waitlist.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      form.style.display = 'none';
+      const success = document.getElementById('waitlistSuccess');
+      if (success) {
+        success.style.display = 'block';
+        success.style.animation = 'fadeInUp 0.5s ease forwards';
+      }
+    } else {
+      // Afficher les erreurs
+      if (data.errors && data.errors.length > 0) {
+        alert('Erreur(s):\n' + data.errors.join('\n'));
+      }
+      if (btn) {
+        btn.innerHTML = '<span>Je rejoins la liste d\'attente</span>';
+        btn.disabled = false;
+      }
     }
-  }, 900);
+  })
+  .catch(error => {
+    console.error('Erreur:', error);
+    alert('Erreur lors de l\'inscription. Veuillez réessayer.');
+    if (btn) {
+      btn.innerHTML = '<span>Je rejoins la liste d\'attente</span>';
+      btn.disabled = false;
+    }
+  });
 }
