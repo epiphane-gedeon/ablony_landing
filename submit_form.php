@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '0');
 
 // Configuration
-$recipient_email = 'contact@epiphane-gedeon.com';
+$recipient_email = 'contact@ablony.net';
 $response = array();
 
 // Vérifier si la requête est en POST
