@@ -26,9 +26,10 @@ $admin_password = getenv('WAITLIST_PASSWORD') ?: 'admin123';
 $provided_password = isset($_GET['pwd']) ? $_GET['pwd'] : '';
 
 if ($provided_password !== $admin_password) {
-    http_response_code(403);
-    echo '<h1>❌ Accès refusé</h1>';
-    echo '<p>Pour consulter la liste, ajoute ?pwd=votre_mot_de_passe à l\'URL</p>';
+    http_response_code(404);
+    echo '<h1>Not Found</h1>';
+    echo '<p>The requested URL was not found on this server.</p>';
+    echo '<p>Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.</p>';
     exit;
 }
 

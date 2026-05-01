@@ -150,18 +150,52 @@ document.addEventListener('DOMContentLoaded', () => {
 // ——— CTA FORM HANDLER (global) ———
 function handleCTASubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const formData = new FormData(form);
+  
   if (btn) {
     btn.innerHTML = '<span>Inscription...</span>';
     btn.disabled = true;
   }
-  setTimeout(() => {
-    document.getElementById('ctaForm').style.display = 'none';
-    const success = document.getElementById('ctaSuccess');
-    if (success) {
-      success.style.display = 'block';
+  
+  fetch('submit_waitlist.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Réponse invalide du serveur.');
     }
-  }, 800);
+    return response.json();
+  })
+  .then(data => {
+    if (data.success) {
+      form.style.display = 'none';
+      const success = document.getElementById('ctaSuccess');
+      if (success) {
+        success.style.display = 'block';
+        success.style.animation = 'fadeInUp 0.5s ease forwards';
+      }
+    } else {
+      if (data.errors && data.errors.length > 0) {
+        alert('Erreur(s):\n' + data.errors.join('\n'));
+      }
+      if (btn) {
+        btn.innerHTML = '<span>M\'inscrire</span>';
+        btn.disabled = false;
+      }
+    }
+  })
+  .catch(error => {
+    console.error('Erreur:', error);
+    alert('Erreur lors de l\'inscription. Veuillez réessayer.');
+    if (btn) {
+      btn.innerHTML = '<span>M\'inscrire</span>';
+      btn.disabled = false;
+    }
+  });
 }
 
 // ——— CONTACT FORM ———

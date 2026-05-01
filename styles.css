@@ -894,7 +894,7 @@ p { color: var(--gray-600); }
   max-width: 280px;
   line-height: 1.6;
 }
-.footer-social { display: flex; gap: 12px; }
+.footer-social { display: flex; gap: 12px; flex-wrap: wrap; }
 .social-link {
   display: inline-flex;
   align-items: center;
