@@ -191,7 +191,7 @@ traitement des réclamations. Exemple : pour un article à 10 000 F, vous payez
 **Recharge du porte-monnaie — gratuite.** Le montant rechargé est crédité
 intégralement : vous rechargez 2 000 F, vous disposez de 2 000 F.
 
-**Retrait — 5 % du montant retiré, à la charge du vendeur, plafonné à 5 000 F.**
+**Retrait — 5 % du montant retiré, à la charge du vendeur.**
 Les frais sont retenus **sur** le montant demandé, jamais ajoutés par-dessus,
 afin que vous puissiez toujours retirer l'intégralité de votre solde. Exemple :
 pour un retrait de 10 000 F, vous recevez 9 500 F. Le montant net vous est
