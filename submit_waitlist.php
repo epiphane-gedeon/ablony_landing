@@ -4,6 +4,8 @@ header('Content-Type: application/json; charset=UTF-8');
 error_reporting(E_ALL);
 ini_set('display_errors', '0');
 
+require_once __DIR__ . '/mail_templates.php';
+
 // Charger les variables d'environnement depuis .env
 $env_file = __DIR__ . '/.env';
 if (file_exists($env_file)) {
@@ -77,6 +79,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Insérer le nouvel email
         $insert = $db->prepare("INSERT INTO waitlist (email) VALUES (?)");
         $insert->execute([$email]);
+
+        // Mail de remerciement (l'inscription reste un succès même si l'envoi échoue)
+        if (!send_waitlist_thankyou_email($email)) {
+            error_log('Waitlist thank-you mail failed for ' . $email);
+        }
 
         $response['success'] = true;
         $response['message'] = 'Email ajouté à la liste d\'attente avec succès !';

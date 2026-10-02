@@ -153,12 +153,12 @@ function handleCTASubmit(e) {
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
   const formData = new FormData(form);
-  
+
   if (btn) {
     btn.innerHTML = '<span>Inscription...</span>';
     btn.disabled = true;
   }
-  
+
   fetch('submit_waitlist.php', {
     method: 'POST',
     body: formData
@@ -259,13 +259,12 @@ function handleWaitlistSubmit(e) {
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
   const formData = new FormData(form);
-  console.log (formData);
-  
+
   if (btn) {
     btn.innerHTML = '<span>Inscription...</span>';
     btn.disabled = true;
   }
-  
+
   fetch('submit_waitlist.php', {
     method: 'POST',
     body: formData

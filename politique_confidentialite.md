@@ -131,9 +131,6 @@ s'appuie sur des prestataires. Les voici :
 - **nyole**, opéré par Cartflox — traitement des paiements. Les données de
   votre carte ou de votre compte mobile money sont saisies chez lui : **Ablony
   ne les voit ni ne les conserve**.
-- **GeniusPay** — traitement des paiements jusqu'en octobre 2026, et toujours
-  susceptible d'être utilisé en cas d'indisponibilité de nyole. Les mêmes
-  garanties s'appliquent : Ablony ne voit ni ne conserve vos données bancaires.
 - **Google Maps Platform** — affichage de la carte et recherche d'adresse. Le
   lieu que vous cherchez est transmis à Google.
 - **Les personnes chargées de la livraison** — votre nom et votre adresse,

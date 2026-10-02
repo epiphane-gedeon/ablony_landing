@@ -1,0 +1,34 @@
+{
+  "hosting": {
+    "site": "ablony-site",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      ".env",
+      ".env.example",
+      "data/**",
+      "docker/**",
+      "Dockerfile",
+      "docker-compose.yml",
+      "*.php",
+      "README.md",
+      "DEPLOIEMENT.md"
+    ],
+    "headers": [
+      {
+        "source": "**/*.md",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "**/*.@(html|json)",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "**/*.@(css|js|png|jpg|jpeg|svg|webp|ico|woff|woff2)",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+      }
+    ]
+  }
+}
