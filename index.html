@@ -66,7 +66,15 @@
           Ablony simplifie la vente et l'achat de vêtements et d'accessoires de seconde main. Publie en 30 secondes, vends rapidement, reçois ton argent directement sur ton wallet.
         </p>
         <div class="hero-actions reveal">
-          <a href="waitlist.html" class="btn-primary">
+          <!-- Mène à l'application, qui prend en charge l'installation :
+               l'invite d'installation appartient à l'origine de la PWA, un
+               bouton posé ici ne peut pas l'ouvrir lui-même. `?install=1`
+               déclenche l'aide dès l'arrivée. -->
+          <a href="https://app.ablony.net/?install=1" class="btn-primary">
+            <span>Ouvrir l'application</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="waitlist.html" class="btn-ghost">
             <span>Rejoindre la liste d'attente</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
