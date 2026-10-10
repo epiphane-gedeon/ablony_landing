@@ -101,17 +101,38 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const email = document.getElementById('ctaEmail')?.value;
       if (!email) return;
-      // Simulate submission
+
+      // L'envoi était simulé : un `setTimeout` affichait « Tu es sur la
+      // liste ! » sans que l'adresse ne soit enregistrée nulle part. Le
+      // visiteur repartait convaincu d'être inscrit alors que rien n'avait eu
+      // lieu — une promesse creuse coûte plus cher qu'un formulaire absent.
       const btn = ctaForm.querySelector('button[type="submit"]');
       if (btn) {
         btn.innerHTML = '<span>Inscription...</span>';
         btn.disabled = true;
       }
-      setTimeout(() => {
-        ctaForm.style.display = 'none';
-        ctaSuccess.style.display = 'block';
-        ctaSuccess.style.animation = 'fadeInUp 0.5s ease forwards';
-      }, 800);
+
+      const donnees = new FormData(ctaForm);
+      fetch('submit_waitlist.php', { method: 'POST', body: donnees })
+        .then((r) => {
+          const type = r.headers.get('content-type') || '';
+          if (!type.includes('application/json')) {
+            throw new Error('Réponse invalide du serveur.');
+          }
+          return r.json();
+        })
+        .then((data) => {
+          if (!data.success) throw new Error(data.message || 'Échec');
+          ctaForm.style.display = 'none';
+          ctaSuccess.style.display = 'block';
+          ctaSuccess.style.animation = 'fadeInUp 0.5s ease forwards';
+        })
+        .catch(() => {
+          if (btn) {
+            btn.innerHTML = '<span>Réessayer</span>';
+            btn.disabled = false;
+          }
+        });
     });
   }
 
