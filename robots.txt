@@ -1,0 +1,9 @@
+# Ablony — https://ablony.net
+User-agent: *
+Allow: /
+
+# L'application elle-même n'a pas à être explorée : c'est un SPA dont le
+# contenu est derrière un compte, et ses fiches produit changent sans cesse.
+# Seules les pages du site sont indexables.
+
+Sitemap: https://ablony.net/sitemap.xml

@@ -3,16 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ablony — Donne une seconde vie à ton style</title>
-  <meta name="description" content="Ablony est l'application mobile pour vendre et acheter des vêtements en Afrique. Simple, rapide, sécurisé. Rejoins la liste d'attente dès maintenant." />
-  <meta property="og:title" content="Ablony — Donne une seconde vie à ton style" />
-  <meta property="og:description" content="Vends tes vêtements, achète facilement, reçois ton argent. L'app de mode seconde main pensée pour l'Afrique." />
+  <!-- Le titre vise ce que les gens tapent réellement : « vendre vêtements
+       occasion Lomé », « friperie en ligne Togo ». Une accroche de marque
+       seule (« Donne une seconde vie à ton style ») ne ressort sur aucune
+       recherche, puisque personne ne cherche ces mots-là. -->
+  <title>Ablony — Acheter et vendre des vêtements d'occasion au Togo</title>
+  <meta name="description" content="Achetez et vendez des vêtements d'occasion à Lomé en toute sécurité. Votre argent est bloqué jusqu'à la réception du colis, que nous récupérons chez le vendeur. Paiement Mobile Money." />
+  <meta name="keywords" content="vêtements occasion Togo, friperie en ligne Lomé, vendre vêtements Lomé, seconde main Togo, acheter habits occasion, Mobile Money Togo" />
+  <link rel="canonical" href="https://ablony.net/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Ablony" />
+
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ablony" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://ablony.net/" />
+  <meta property="og:title" content="Ablony — Acheter et vendre des vêtements d'occasion au Togo" />
+  <meta property="og:description" content="Votre argent est bloqué jusqu'à la réception du colis. On vient le chercher chez le vendeur, on vous le livre. Paiement Mobile Money." />
+  <meta property="og:image" content="https://ablony.net/images/ablony_mockup.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ablony — Vêtements d'occasion au Togo" />
+  <meta name="twitter:description" content="Votre argent est bloqué jusqu'à la réception du colis. Paiement Mobile Money." />
+  <meta name="twitter:image" content="https://ablony.net/images/ablony_mockup.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+
+  <!-- Données structurées : sans elles, Google lit une page de texte. Avec
+       elles, il sait qu'il s'agit d'une place de marché, où, et dans quelle
+       langue — ce qui conditionne l'affichage sur les recherches locales. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ablony",
+    "url": "https://ablony.net/",
+    "inLanguage": "fr",
+    "description": "Place de marché d'achat et de vente de vêtements d'occasion entre particuliers au Togo."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ablony",
+    "url": "https://ablony.net/",
+    "logo": "https://ablony.net/images/favicon.png",
+    "areaServed": { "@type": "Country", "name": "Togo" },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "support@ablony.net",
+      "availableLanguage": ["fr"]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Ablony",
+    "operatingSystem": "Android, Web",
+    "applicationCategory": "ShoppingApplication",
+    "url": "https://app.ablony.net/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "XOF" }
+  }
+  </script>
 </head>
 <body>
 
@@ -30,7 +88,7 @@
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </div>
-      <a href="waitlist.html" class="btn-nav">Rejoindre</a>
+      <a href="https://app.ablony.net/?install=1" class="btn-nav">Ouvrir l'app</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -40,7 +98,7 @@
       <a href="#features" class="mobile-link">Fonctionnalités</a>
       <a href="#faq" class="mobile-link">FAQ</a>
       <a href="contact.html" class="mobile-link">Contact</a>
-      <a href="waitlist.html" class="btn-primary mobile-cta">Rejoindre la liste d'attente</a>
+      <a href="https://app.ablony.net/?install=1" class="btn-primary mobile-cta">Ouvrir l'application</a>
     </div>
   </nav>
 
@@ -57,13 +115,21 @@
           <span class="badge-dot"></span>
           Bientôt disponible !
         </div>
+        <!-- Le h1 est le signal le plus fort pour une recherche. Il doit
+             donc porter les mots que les gens tapent — « vêtements
+             d'occasion », « Lomé » — et non une accroche de marque seule, qui
+             ne ressort sur aucune requête. L'émotion passe dans le
+             sous-titre, qui n'est pas lu de la même façon. -->
         <h1 class="hero-title reveal">
-          Donne une<br/>
-          <span class="text-gradient">seconde vie</span><br/>
-          à ton style
+          Achète et vends<br/>
+          <span class="text-gradient">tes vêtements</span><br/>
+          d'occasion à Lomé
         </h1>
         <p class="hero-sub reveal">
-          Ablony simplifie la vente et l'achat de vêtements et d'accessoires de seconde main. Publie en 30 secondes, vends rapidement, reçois ton argent directement sur ton wallet.
+          Donne une seconde vie à ton style. Publie une annonce en 30 secondes,
+          on vient chercher le colis chez toi, et <strong>ton argent est bloqué
+          jusqu'à ce que l'acheteur confirme avoir reçu</strong>. Paiement
+          Mobile Money ou carte.
         </p>
         <div class="hero-actions reveal">
           <!-- Mène à l'application, qui prend en charge l'installation :
@@ -72,10 +138,6 @@
                déclenche l'aide dès l'arrivée. -->
           <a href="https://app.ablony.net/?install=1" class="btn-primary">
             <span>Ouvrir l'application</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="waitlist.html" class="btn-ghost">
-            <span>Rejoindre la liste d'attente</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="#how" class="btn-ghost">
@@ -331,30 +393,35 @@
     <div class="container">
       <div class="coming-inner">
         <div class="coming-left">
-          <div class="coming-tag">🚀 En cours de développement</div>
-          <h2>L'app arrive bientôt.</h2>
-          <p>Ablony est actuellement en phase de développement. Inscris-toi sur la liste d'attente pour être parmi les premiers à l'utiliser et bénéficier des avantages exclusifs des early adopters.</p>
+          <div class="coming-tag">🎉 Disponible maintenant</div>
+          <h2>Ablony est en ligne.</h2>
+          <p>L'application fonctionne dès maintenant à Lomé, depuis votre navigateur ou installée sur votre téléphone. Les premiers inscrits deviennent Fondateurs : badge à vie sur leur profil, 5 boosts offerts et premier retrait sans frais.</p>
           <div class="coming-perks">
-            <div class="perk"><span>✓</span> Accès en avant-première</div>
-            <!-- <div class="perk"><span>✓</span> 0% de commission au lancement</div> -->
-            <div class="perk"><span>✓</span> Badge "Fondateur"</div>
+            <div class="perk"><span>✓</span> Badge « Fondateur » à vie</div>
+            <div class="perk"><span>✓</span> 5 boosts offerts</div>
+            <div class="perk"><span>✓</span> Premier retrait sans frais</div>
+          </div>
+          <div class="hero-actions" style="margin-top:22px">
+            <a href="https://app.ablony.net/?install=1" class="btn-primary">
+              <span>Commencer maintenant</span>
+            </a>
           </div>
         </div>
         <div class="coming-right">
           <div class="coming-progress-wrap">
             <div class="coming-progress-label">
-              <span>Développement</span>
-              <span>75%</span>
+              <span>Application</span>
+              <span>En ligne</span>
             </div>
             <div class="coming-bar">
-              <div class="coming-fill" style="width: 75%"></div>
+              <div class="coming-fill" style="width: 100%"></div>
             </div>
             <div class="coming-progress-label">
-              <span>Beta test</span>
-              <span>Bientôt</span>
+              <span>Livraison à Lomé</span>
+              <span>Active</span>
             </div>
             <div class="coming-bar">
-              <div class="coming-fill" style="width: 10%"></div>
+              <div class="coming-fill" style="width: 100%"></div>
             </div>
           </div>
         </div>
@@ -376,7 +443,7 @@
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-a">
-            <p>Ablony est actuellement en phase de développement. Tu peux t'inscrire sur notre liste d'attente pour être parmi les premiers à être notifié lors du lancement officiel.</p>
+            <p>Oui. Ablony fonctionne dès maintenant à Lomé. Vous pouvez l'utiliser depuis votre navigateur sur <a href="https://app.ablony.net/">app.ablony.net</a>, ou l'installer sur votre téléphone pour y accéder comme une application.</p>
           </div>
         </div>
         <div class="faq-item reveal">
@@ -405,7 +472,7 @@
           </button>
           <div class="faq-a">
             <p>L'application est gratuite à l'installation. nous prenons juste une petite commission au retrait des fonds.</p>
-            <p>Au lancement, les early adopters bénéficieront de 0% de commission. C'est l'un des avantages exclusifs de s'inscrire sur la liste d'attente maintenant.</p>
+            <p>Déposer une annonce est gratuit. Les 100 premiers inscrits deviennent Fondateurs : badge à vie, 5 boosts offerts pour mettre leurs annonces en avant, et premier retrait sans frais.</p>
           </div>
         </div>
         <div class="faq-item reveal">
@@ -515,7 +582,7 @@
           <div class="footer-col">
             <h4>Entreprise</h4>
             <a href="contact.html">Contact</a>
-            <a href="waitlist.html">Liste d'attente</a>
+            <a href="https://app.ablony.net/">Ouvrir l'application</a>
             <a href="politique_confidentialite.html">Politique de confidentialité</a>
             <a href="mention_legal.html">Mentions légales</a>
           </div>
